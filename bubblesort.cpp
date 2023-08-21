@@ -2,7 +2,6 @@
  
 using namespace std;
  
-// Sort arr[] of size n using Bubble Sort. 
 void BubbleSort (int arr[], int n)
 {
 	int i, j;
@@ -10,7 +9,6 @@ void BubbleSort (int arr[], int n)
 	{
 		for (j = 0; j < n-i-1; ++j)
 		{
-			// Comparing consecutive data and switching values if value at j > j+1.
 			if (arr[j] > arr[j+1])
 			{
 				arr[j] = arr[j]+arr[j+1];
@@ -18,7 +16,6 @@ void BubbleSort (int arr[], int n)
 				arr[j] = arr[j]-arr[j + 1];
 			}
 		}
-		// Value at n-i-1 will be maximum of all the values below this index.
 	}	
 }	
  
@@ -37,8 +34,7 @@ int main()
  
 	BubbleSort(arr, n);
  
-	// Display the sorted data.
-	cout<<"\nSorted Data ";
+ 	cout<<"\nSorted Data ";
 	for (i = 0; i < n; i++)
         cout<<"-->"<<arr[i];
  

@@ -1,12 +1,8 @@
-/*
- * C Program to Implement Selection Sort
- */
+
 #include <stdio.h>
 void selectionSort(int arr[], int size);
 void swap(int *a, int *b);
-/*
- * Selection sort function
- */
+
 void selectionSort(int arr[], int size)
 {
     int i, j;
@@ -20,7 +16,6 @@ void selectionSort(int arr[], int size)
     }
 }
  
-/* Function to swap two variables */
 void swap(int *a, int *b)
 {
     int temp;
@@ -28,10 +23,7 @@ void swap(int *a, int *b)
     *a = *b;
     *b = temp;
 }
- 
-/*
- * Main Function
- */
+
 int main()
 {
     int array[10], i, size;

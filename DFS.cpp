@@ -1,5 +1,3 @@
-// DFS algorithm in C++
-
 #include <iostream>
 #include <list>
 using namespace std;
@@ -15,19 +13,16 @@ class Graph {
   void DFS(int vertex);
 };
 
-// Initialize graph
 Graph::Graph(int vertices) {
   numVertices = vertices;
   adjLists = new list<int>[vertices];
   visited = new bool[vertices];
 }
 
-// Add edges
 void Graph::addEdge(int src, int dest) {
   adjLists[src].push_front(dest);
 }
 
-// DFS algorithm
 void Graph::DFS(int vertex) {
   visited[vertex] = true;
   list<int> adjList = adjLists[vertex];

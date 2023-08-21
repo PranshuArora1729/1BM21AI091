@@ -1,9 +1,4 @@
-//
-// Created by Asus on 03-07-2023.
-//
-//
-// Created by Asus on 02-07-2023.
-//
+
 #include<iostream>
 using namespace std;
 
