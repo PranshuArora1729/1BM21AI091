@@ -13,26 +13,25 @@ int graph[NODE][NODE] = {
 };
 
 void topoSort(int u, bool visited[], stack<int>&stk) {
-   visited[u] = true;                //set as the node v is visited
+   visited[u] = true;          
 
    for(int v = 0; v<NODE; v++) {
-      if(graph[u][v]) {             //for allvertices v adjacent to u
+      if(graph[u][v]) {          
          if(!visited[v])
             topoSort(v, visited, stk);
       }
    }
-   stk.push(u);     //push starting vertex into the stack
-}
+   stk.push(u);   
 
 void performTopologicalSort() {
    stack<int> stk;
    bool vis[NODE];
 
    for(int i = 0; i<NODE; i++)
-      vis[i] = false;     //initially all nodes are unvisited
+      vis[i] = false;   
 
    for(int i = 0; i<NODE; i++)
-      if(!vis[i])     //when node is not visited
+      if(!vis[i])  
          topoSort(i, vis, stk);
 
    while(!stk.empty()) {
